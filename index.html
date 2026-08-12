@@ -232,7 +232,9 @@ function sendToWhatsapp() {
   msgLines.push("Gostaria de confirmar disponibilidade e forma de contratação.");
 
   const msg = msgLines.join('\n');
-  const url = `https://wa.me/?text=${encodeURIComponent(msg)}`;
+  // direct WhatsApp to the client number: +55 21 98056-3235 (country code +55, area 21)
+  const whatsappNumber = '5521980563235';
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
   window.open(url, '_blank');
 }
 
